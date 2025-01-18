@@ -18,10 +18,10 @@ X setup SASS
 TLDR Version (Resume like)
 - input contents
 X WORK layout
-- ABOUT layout
-- CONTACT layout
-- mobile responsiveness
-- flag on url to become default start
+X ABOUT layout
+X CONTACT layout
+X mobile responsiveness
+X flag on url to become default start
 
 Fancy Version (Book)
 - book at start screen 

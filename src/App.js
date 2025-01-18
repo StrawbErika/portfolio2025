@@ -3,9 +3,10 @@ import "./App.css";
 import { TLDR } from "./Pages/TLDR";
 
 function App() {
+  const tldrFlag = window.location.search;
   return (
     <div className="App-header">
-      <TLDR />
+      {tldrFlag ? <TLDR /> : <button> hello</button>}
     </div>
   );
 }
