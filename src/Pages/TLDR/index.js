@@ -4,6 +4,7 @@ import bop from "./../../Assets/bop.mp3";
 import beep from "./../../Assets/beep.mp3";
 import open from "./../../Assets/open.mp3";
 import close from "./../../Assets/close.mp3";
+import { IconDisplay } from "../../Components/resource";
 import useSound from "use-sound";
 import { workDetails, extraCurricularDetails } from "./constants";
 import {
@@ -14,6 +15,7 @@ import {
   AiOutlineCaretRight,
   AiOutlineCaretDown,
 } from "react-icons/ai";
+
 export function TLDR() {
   const [play, { stop }] = useSound(bop, { volume: 0.5 });
   const [playBeep] = useSound(beep, { volume: 0.5 });
@@ -86,7 +88,6 @@ export function TLDR() {
           </div>
         </div>
         <hr />
-
         <div className={styles.about}>
           <div
             className={styles.titleButton}
@@ -133,43 +134,31 @@ export function TLDR() {
           <div className={styles.contactBlock}>
             Say Hi!
             <div className={styles.links}>
-              <a
-                onMouseEnter={() => {
-                  playBeep();
-                }}
-                href="mailto: erika.nepomuceno392@gmail.com"
-              >
-                <AiOutlineMail className={styles.iconButtons} />
-              </a>
-              <a
-                onMouseEnter={() => {
-                  playBeep();
-                }}
-                href="https://github.com/StrawbErika"
-              >
-                <AiFillGithub className={styles.iconButtons} />
-              </a>
-              <a
-                onMouseEnter={() => {
-                  playBeep();
-                }}
-                href="https://www.linkedin.com/in/eanepomuceno-392/"
-              >
-                <AiFillLinkedin className={styles.iconButtons} />
-              </a>
+              {IconDisplay(
+                playBeep,
+                <AiOutlineMail className={styles.iconButtons} />,
+                "mailto: erika.nepomuceno392@gmail.com"
+              )}
+              {IconDisplay(
+                playBeep,
+                <AiFillGithub className={styles.iconButtons} />,
+                "https://github.com/StrawbErika"
+              )}
+              {IconDisplay(
+                playBeep,
+                <AiFillLinkedin className={styles.iconButtons} />,
+                "https://www.linkedin.com/in/eanepomuceno-392/"
+              )}
             </div>
           </div>
           <div className={styles.contactBlock}>
             Resume:
-            <a
-              onMouseEnter={() => {
-                playBeep();
-              }}
-              href={bop}
-              download="NepomucenoResume.pdf"
-            >
-              <AiOutlineFileText className={styles.iconButtons} />
-            </a>
+            {IconDisplay(
+              playBeep,
+              <AiOutlineFileText className={styles.iconButtons} />,
+              bop,
+              "NepomucenoResume.pdf"
+            )}
           </div>
         </div>
       </div>
