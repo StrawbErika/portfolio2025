@@ -1,4 +1,4 @@
-export const IconDisplay = (sound, Component, link, download) => {
+export const IconDisplay = ({ sound, Component, link, download }) => {
   return download ? (
     <a
       onMouseEnter={() => {

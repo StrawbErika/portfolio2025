@@ -29,6 +29,7 @@ Fancy Version (Book)
 X tldr bookmark
 X resume download bookmark
 X flip pages
+X table of contents
 - WORK layout
 - PROJECTS layout
 - ABOUT layout

@@ -8,17 +8,15 @@ import "flipping-pages/dist/style.css";
 
 // TODO: be cool to be draggable
 export function Bookmark({ icon, link, downloadFlag, page, name }) {
-  const [selected, setSelected] = useState(0);
   const [play] = useSound(bookmark, { volume: 0.1 });
-
   return (
-    <div className={page === 2 && styles.bookmarkRight}>
+    <div className={page === 4 && styles.bookmarkRight}>
       <a
         onMouseEnter={() => {
           play();
         }}
         style={downloadFlag ? { marginTop: "13%" } : {}}
-        className={page > 0 && page < 2 ? styles.hide : styles.bookmark}
+        className={page > 0 && page < 4 ? styles.hide : styles.bookmark}
         href={link}
       >
         {icon}

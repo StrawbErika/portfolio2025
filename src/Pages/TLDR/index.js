@@ -136,31 +136,31 @@ export function TLDR() {
           <div className={styles.contactBlock}>
             Say Hi!
             <div className={styles.links}>
-              {IconDisplay(
-                playBeep,
-                <AiOutlineMail className={styles.iconButtons} />,
-                "mailto: erika.nepomuceno392@gmail.com"
-              )}
-              {IconDisplay(
-                playBeep,
-                <AiFillGithub className={styles.iconButtons} />,
-                "https://github.com/StrawbErika"
-              )}
-              {IconDisplay(
-                playBeep,
-                <AiFillLinkedin className={styles.iconButtons} />,
-                "https://www.linkedin.com/in/eanepomuceno-392/"
-              )}
+              <IconDisplay
+                sound={playBeep}
+                Component={<AiOutlineMail className={styles.iconButtons} />}
+                link={"mailto: erika.nepomuceno392@gmail.com"}
+              />
+              <IconDisplay
+                sound={playBeep}
+                Component={<AiFillGithub className={styles.iconButtons} />}
+                link={"https://github.com/StrawbErika"}
+              />
+              <IconDisplay
+                sound={playBeep}
+                Component={<AiFillLinkedin className={styles.iconButtons} />}
+                link={"https://www.linkedin.com/in/eanepomuceno-392/"}
+              />
             </div>
           </div>
           <div className={styles.contactBlock}>
             Resume:
-            {IconDisplay(
-              playBeep,
-              <AiOutlineFileText className={styles.iconButtons} />,
-              bop,
-              "NepomucenoResume.pdf"
-            )}
+            <IconDisplay
+              sound={playBeep}
+              Component={<AiOutlineFileText className={styles.iconButtons} />}
+              link={bop}
+              download={"NepomucenoResume.pdf"}
+            />
           </div>
         </div>
       </div>

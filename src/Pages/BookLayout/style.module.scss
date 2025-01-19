@@ -5,6 +5,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
   .directionButtons {
     margin: 10px;
     padding: 10px;
@@ -19,7 +20,6 @@
       .page {
         height: 100%;
         width: 100%;
-
         background-color: $scroll;
         display: flex;
         flex-direction: row;
@@ -27,12 +27,14 @@
         .left {
           width: 50%;
           width: 100%;
-          background-color: white;
+          background-color: $scroll;
         }
         .right {
           width: 50%;
           width: 100%;
-          background-color: gray;
+          filter: brightness(95%);
+          color: black;
+          background-color: $scroll;
         }
       }
     }

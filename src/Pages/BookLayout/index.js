@@ -4,6 +4,7 @@ import book from "./../../Assets/flippage.mp3";
 import styles from "./style.module.scss";
 import { FlippingPages } from "flipping-pages";
 import { Bookmark } from "../../Components/Bookmark";
+import { TableOfContents } from "../TableOfContents";
 import useSound from "use-sound";
 import { AiOutlineFileText, AiOutlineClockCircle } from "react-icons/ai";
 
@@ -19,7 +20,16 @@ export function BookLayout() {
   };
   const next = () => {
     play();
-    setSelected((selected) => Math.min(selected + 1, 2));
+    setSelected((selected) => Math.min(selected + 1, 4));
+  };
+
+  const Page = ({ Left, Right }) => {
+    return (
+      <div className={styles.page}>
+        <div className={styles.left}>{Left}</div>
+        <div className={styles.right}>{Right}</div>
+      </div>
+    );
   };
   return (
     <div className={styles.bookLayout}>
@@ -53,18 +63,16 @@ export function BookLayout() {
             selected={selected}
             disableSwipe
           >
-            <div className={styles.page}>
-              <div className={styles.left}></div>
-              <div className={styles.right}></div>
-            </div>
-            <div className={styles.page}>Page 2</div>
-            <div className={styles.page}>Page 3</div>
+            <Page Right={<TableOfContents setPage={setSelected} />} />
+            <Page Right={<TableOfContents setPage={setSelected} />} />
+            <Page Right={<TableOfContents setPage={setSelected} />} />
+            <Page Right={<TableOfContents setPage={setSelected} />} />
           </FlippingPages>
         </div>
       </div>
       <button
-        disabled={selected === 2}
-        className={selected === 2 ? styles.hide : styles.directionButtons}
+        disabled={selected === 4}
+        className={selected === 4 ? styles.hide : styles.directionButtons}
         onClick={next}
       >
         Next
