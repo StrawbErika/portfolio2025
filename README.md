@@ -26,9 +26,9 @@ X flag on url to become default start
 Fancy Version (Book)
 - book at start screen 
 - on click flip open book 
-- tldr bookmark
-- resume download bookmark
-- flip pages
+X tldr bookmark
+X resume download bookmark
+X flip pages
 - WORK layout
 - PROJECTS layout
 - ABOUT layout

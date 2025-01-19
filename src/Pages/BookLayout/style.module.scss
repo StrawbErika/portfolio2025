@@ -1,0 +1,50 @@
+@import "./../../colors";
+
+.bookLayout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .directionButtons {
+    margin: 10px;
+    padding: 10px;
+  }
+  .book {
+    .pages {
+      padding: 5px 10px 5px 10px;
+      background-color: $scrollFont;
+      height: 80vh;
+      width: 80vw;
+
+      .page {
+        height: 100%;
+        width: 100%;
+
+        background-color: $scroll;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .left {
+          width: 50%;
+          width: 100%;
+          background-color: white;
+        }
+        .right {
+          width: 50%;
+          width: 100%;
+          background-color: gray;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  opacity: 0;
+  margin: 10px;
+  padding: 10px;
+}
+
+.iconButtons {
+  font-size: 50px;
+}

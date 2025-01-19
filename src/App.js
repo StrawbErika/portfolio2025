@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./style.module.scss";
 import book from "./Assets/flippage.mp3";
 import { TLDR } from "./Pages/TLDR";
-import { TableOfContents } from "./Pages/TableOfContents";
+import { BookLayout } from "./Pages/BookLayout";
 import useSound from "use-sound";
 
 // TODO: Book slide out
@@ -11,6 +11,7 @@ function App() {
   const [open, setOpen] = useState(false);
   const [showPage, setShowPage] = useState(false);
   const tldrFlag = window.location.search;
+
   return (
     <div className={styles.appHeader}>
       {tldrFlag ? (
@@ -30,7 +31,7 @@ function App() {
           hello
         </div>
       )}
-      {showPage && <TLDR />}
+      {showPage && <BookLayout />}
     </div>
   );
 }

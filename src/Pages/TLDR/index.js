@@ -54,16 +54,17 @@ export function TLDR() {
             <p className={styles.title}>Work Experience</p>
           </div>
           <div hidden={!openWork}>
-            {workDetails.map((work) => {
+            {workDetails.map((work, i) => {
               return (
-                <div className={styles.jobBlock}>
+                <div key={i} className={styles.jobBlock}>
                   <p className={styles.subHeader}>
                     {work.Company} ({work.Year})
                   </p>
                   <div className={styles.techStack}>
-                    {work.TechStack.map((tech) => {
+                    {work.TechStack.map((tech, i) => {
                       return (
                         <div
+                          key={i}
                           className={styles.tech}
                           onMouseEnter={() => {
                             play();
@@ -79,8 +80,8 @@ export function TLDR() {
                     })}
                   </div>
                   <ul className={styles.descriptions}>
-                    {work.Descriptions.map((desc) => {
-                      return <li>{desc}</li>;
+                    {work.Descriptions.map((desc, i) => {
+                      return <li key={i}>{desc}</li>;
                     })}
                   </ul>
                 </div>
@@ -119,9 +120,9 @@ export function TLDR() {
                 <p className={styles.course}>BS COMPUTER SCIENCE, 2015-2020</p>
               </div>
               <p className={styles.subHeader}> Extra Curricular Activities </p>
-              {extraCurricularDetails.map((extra) => {
+              {extraCurricularDetails.map((extra, i) => {
                 return (
-                  <div className={styles.extraCurricular}>
+                  <div key={i} className={styles.extraCurricular}>
                     <p className={styles.uni}>{extra.Title}</p>
                     <p className={styles.course}>{extra.Association}</p>
                     <p className={styles.year}>{extra.Year}</p>
