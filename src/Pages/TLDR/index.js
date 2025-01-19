@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./style.module.scss";
 import bop from "./../../Assets/bop.mp3";
 import beep from "./../../Assets/beep.mp3";
@@ -17,6 +17,7 @@ import {
 } from "react-icons/ai";
 
 export function TLDR() {
+  // TODO: button to go back to book
   const [play, { stop }] = useSound(bop, { volume: 0.5 });
   const [playBeep] = useSound(beep, { volume: 0.5 });
   const [playOpen] = useSound(open, { volume: 0.5 });
