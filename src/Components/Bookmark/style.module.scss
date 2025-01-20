@@ -3,24 +3,25 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 4%;
+  margin-top: 2%;
   width: 30%;
-  height: 10%;
+  height: 8%;
   border-radius: 20px;
   background-color: grey;
-  position: absolute;
   padding: 20px;
   margin-left: -30px;
+  position: absolute;
   z-index: 9;
   -webkit-animation: 0.7s normal forwards 1 fadein;
   animation: 0.7s normal forwards 1 fadein;
   color: black;
+  box-shadow: 0.8px 1.6px 1.6px hsl(0deg 0% 0% / 0.48);
+
   .title {
     font-size: 35px;
     margin-left: 10px;
     letter-spacing: 5px;
   }
-  box-shadow: 0.8px 1.6px 1.6px hsl(0deg 0% 0% / 0.48);
 }
 .bookmark:hover {
   transform: scale(1.05);
@@ -32,8 +33,24 @@
   margin-right: -20px;
 }
 .hide {
-  opacity: 0;
-  display: none;
+  margin-left: -80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+  height: 8%;
+  border-radius: 20px 0px 0px 20px;
+  background-color: grey;
+  padding: 20px;
+  position: absolute;
+  z-index: 9;
+  color: black;
+  box-shadow: 0.8px 1.6px 1.6px hsl(0deg 0% 0% / 0.48);
+}
+.hide:hover {
+  transform: scale(1.02);
+  box-shadow: 1.8px 3.5px 3.5px hsl(0deg 0% 0% / 0.45);
 }
 
 @keyframes fadein {

@@ -57,7 +57,8 @@ export function TLDR() {
             {workDetails.map((work, i) => {
               return (
                 <div key={i} className={styles.jobBlock}>
-                  <p className={styles.subHeader}>
+                  <p className={styles.subHeader}>{work.Title}</p>
+                  <p className={styles.company}>
                     {work.Company} ({work.Year})
                   </p>
                   <div className={styles.techStack}>

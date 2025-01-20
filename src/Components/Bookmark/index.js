@@ -1,4 +1,3 @@
-import { useState } from "react";
 import bookmark from "./../../Assets/hoverBookmark.mp3";
 
 import styles from "./style.module.scss";
@@ -15,12 +14,12 @@ export function Bookmark({ icon, link, downloadFlag, page, name }) {
         onMouseEnter={() => {
           play();
         }}
-        style={downloadFlag ? { marginTop: "13%" } : {}}
+        style={downloadFlag ? { marginTop: "10%" } : {}}
         className={page > 0 && page < 4 ? styles.hide : styles.bookmark}
         href={link}
       >
         {icon}
-        <div className={styles.title}>{name}</div>
+        {!(page > 0 && page < 4) && <div className={styles.title}>{name}</div>}
       </a>
     </div>
   );

@@ -1,0 +1,61 @@
+@import "./../../colors";
+
+.contents {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  color: $scrollFont;
+  .tableOfContents {
+    letter-spacing: 10px;
+    font-size: 40px;
+    margin: 10% 0px 10px 0px;
+  }
+  .work {
+    margin: 25px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .logo {
+      height: 25%;
+      width: 25%;
+      margin: 0px 20px;
+    }
+    .logo:hover {
+      animation: 1s ease-out 0s 1 tilt;
+      transform: rotate(2deg);
+    }
+    .company {
+      font-size: 17px;
+      font-style: italic;
+      padding: 0px;
+      margin: 0px 0px 5px 0px;
+    }
+    .subHeader {
+      font-weight: 500;
+      margin: 5px 0px;
+    }
+    .descriptions {
+      font-weight: 400;
+      text-align: left;
+      font-size: 15px;
+    }
+    .techStack {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 90%;
+      justify-content: left;
+      flex-wrap: wrap;
+      margin: 0px 0px 5px 0px;
+
+      .tech {
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 5px;
+      }
+    }
+  }
+}
