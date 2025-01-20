@@ -38,11 +38,11 @@ export function WorkLayout({ flag }) {
       </div>
       <div className={styles.workExperience}>
         {flag === "left"
-          ? workDetailsLeft.map((work) => {
-              return <WorkInstance work={work} />;
+          ? workDetailsLeft.map((work, i) => {
+              return <WorkInstance key={i} work={work} />;
             })
-          : workDetailsRight.map((work) => {
-              return <WorkInstance work={work} />;
+          : workDetailsRight.map((work, i) => {
+              return <WorkInstance key={i} work={work} />;
             })}
       </div>
     </div>

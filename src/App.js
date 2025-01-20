@@ -29,6 +29,7 @@ function App() {
           }}
         >
           hello
+          {/* TODO: animated div under the button that rotates and pulses */}
         </div>
       )}
       {showPage && <BookLayout />}

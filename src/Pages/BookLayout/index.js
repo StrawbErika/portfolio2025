@@ -5,6 +5,7 @@ import styles from "./style.module.scss";
 import { FlippingPages } from "flipping-pages";
 import { Bookmark } from "../../Components/Bookmark";
 import { TableOfContents } from "../TableOfContents";
+import { TechLayout } from "../TechLayout";
 import { WorkLayout } from "../WorkLayout";
 import useSound from "use-sound";
 import { AiOutlineFileText, AiOutlineClockCircle } from "react-icons/ai";
@@ -64,11 +65,13 @@ export function BookLayout() {
             selected={selected}
             disableSwipe
           >
+            {/* TODO: left is logo */}
             <Page Right={<TableOfContents setPage={setSelected} />} />
             <Page
               Left={<WorkLayout flag="left" />}
               Right={<WorkLayout flag="right" />}
             />
+            <Page Left={<TechLayout />} Right={<WorkLayout flag="right" />} />
             <Page Right={<TableOfContents setPage={setSelected} />} />
             <Page Right={<TableOfContents setPage={setSelected} />} />
           </FlippingPages>

@@ -18,6 +18,7 @@ export function TableOfContents({ setPage }) {
       </div>
     );
   };
+  // TODO: onclick sound
   return (
     <div className={styles.contents}>
       <div className={styles.tableOfContents}>TABLE OF CONTENTS</div>

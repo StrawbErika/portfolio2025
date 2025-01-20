@@ -19,12 +19,20 @@ import {
 export function TLDR() {
   // TODO: button to go back to book
   const [play, { stop }] = useSound(bop, { volume: 0.5 });
-  const [playBeep] = useSound(beep, { volume: 0.5 });
+  const [playbackRate, setPlaybackRate] = useState(0.75);
+
+  const [playBeep] = useSound(beep, { playbackRate, volume: 0.3 });
   const [playOpen] = useSound(open, { volume: 0.5 });
   const [playClose] = useSound(close, { volume: 0.5 });
   const [openWork, setOpenWork] = useState(false);
   const [openAbout, setOpenAbout] = useState(false);
-
+  const setPitch = () => {
+    if (playbackRate < 1.5) {
+      setPlaybackRate(playbackRate + 0.1);
+    } else {
+      setPlaybackRate(0.75);
+    }
+  };
   return (
     <div className={styles.page} id="TLDR">
       <div className={styles.pageContent}>
@@ -141,16 +149,19 @@ export function TLDR() {
                 sound={playBeep}
                 Component={<AiOutlineMail className={styles.iconButtons} />}
                 link={"mailto: erika.nepomuceno392@gmail.com"}
+                set={() => setPitch()}
               />
               <IconDisplay
                 sound={playBeep}
                 Component={<AiFillGithub className={styles.iconButtons} />}
                 link={"https://github.com/StrawbErika"}
+                set={() => setPitch()}
               />
               <IconDisplay
                 sound={playBeep}
                 Component={<AiFillLinkedin className={styles.iconButtons} />}
                 link={"https://www.linkedin.com/in/eanepomuceno-392/"}
+                set={() => setPitch()}
               />
             </div>
           </div>
@@ -161,6 +172,7 @@ export function TLDR() {
               Component={<AiOutlineFileText className={styles.iconButtons} />}
               link={bop}
               download={"NepomucenoResume.pdf"}
+              set={() => setPitch()}
             />
           </div>
         </div>

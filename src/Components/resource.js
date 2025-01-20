@@ -1,8 +1,9 @@
-export const IconDisplay = ({ sound, Component, link, download }) => {
+export const IconDisplay = ({ sound, Component, link, download, set }) => {
   return download ? (
     <a
       onMouseEnter={() => {
         sound();
+        set();
       }}
       href={link}
       download={download}
@@ -13,6 +14,7 @@ export const IconDisplay = ({ sound, Component, link, download }) => {
     <a
       onMouseEnter={() => {
         sound();
+        set();
       }}
       href={link}
     >

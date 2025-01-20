@@ -1,0 +1,68 @@
+@import "./../../colors";
+
+.contents {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  color: $scrollFont;
+  .title {
+    letter-spacing: 10px;
+    font-size: 40px;
+    margin: 10% 0px 10px 0px;
+  }
+  .subtitle {
+    font-size: 20px;
+    font-weight: 200;
+    font-style: oblique;
+    margin: 10px 0px;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+  }
+  .tech {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+
+    .logo {
+      height: 75%;
+      object-fit: scale-down;
+      margin-bottom: 5px;
+    }
+    .name {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+  .smallTech {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0px;
+    padding: 0px;
+    .small {
+      height: 100%;
+      width: 50%;
+      object-fit: scale-down;
+      margin-bottom: 5px;
+    }
+    .name {
+      font-size: 15px;
+      font-weight: 300;
+    }
+  }
+}
