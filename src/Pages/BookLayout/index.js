@@ -7,6 +7,7 @@ import { Bookmark } from "../../Components/Bookmark";
 import { TableOfContents } from "../TableOfContents";
 import { TechLayout } from "../TechLayout";
 import { WorkLayout } from "../WorkLayout";
+import { ProjectsLayout } from "../ProjectsLayout";
 import useSound from "use-sound";
 import { AiOutlineFileText, AiOutlineClockCircle } from "react-icons/ai";
 
@@ -71,7 +72,7 @@ export function BookLayout() {
               Left={<WorkLayout flag="left" />}
               Right={<WorkLayout flag="right" />}
             />
-            <Page Left={<TechLayout />} Right={<WorkLayout flag="right" />} />
+            <Page Left={<TechLayout />} Right={<ProjectsLayout />} />
             <Page Right={<TableOfContents setPage={setSelected} />} />
             <Page Right={<TableOfContents setPage={setSelected} />} />
           </FlippingPages>

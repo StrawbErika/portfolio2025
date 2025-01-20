@@ -1,0 +1,69 @@
+@import "./../../colors";
+$randomNumber: random(10);
+
+.contents {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  color: $scrollFont;
+  .title {
+    letter-spacing: 10px;
+    font-size: 40px;
+    margin: 10% 0px 10px 0px;
+  }
+  .subtitle {
+    font-size: 20px;
+    font-weight: 200;
+    font-style: oblique;
+    margin: 10px 0px;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+.card {
+  margin: 10px;
+  height: 260px;
+  width: 25%;
+  background-color: rgb(255, 244, 245);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .tech {
+    width: 100%;
+    display: flex;
+    text-wrap: wrap;
+    text-align: center;
+    font-size: 15px;
+    margin: 5px;
+    font-style: italic;
+  }
+  .desc {
+    text-align: center;
+    font-size: 15px;
+    text-wrap: wrap;
+    margin-top: 10px;
+  }
+  .logo {
+    width: 90%;
+    object-fit: scale-down;
+    margin-bottom: 5px;
+  }
+}
+
+.card:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+}
