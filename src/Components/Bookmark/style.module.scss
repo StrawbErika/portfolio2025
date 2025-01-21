@@ -1,3 +1,5 @@
+@import "./../../colors";
+
 .bookmark {
   display: flex;
   flex-direction: row;
@@ -7,14 +9,14 @@
   width: 30%;
   height: 8%;
   border-radius: 20px;
-  background-color: grey;
+  background-color: $bookmark;
+  color: $bookmarkFont;
   padding: 20px;
   margin-left: -30px;
   position: absolute;
   z-index: 9;
   -webkit-animation: 0.7s normal forwards 1 fadein;
   animation: 0.7s normal forwards 1 fadein;
-  color: black;
   box-shadow: 0.8px 1.6px 1.6px hsl(0deg 0% 0% / 0.48);
 
   .title {
@@ -41,11 +43,11 @@
   margin-top: 2%;
   height: 8%;
   border-radius: 20px 0px 0px 20px;
-  background-color: grey;
+  background-color: $bookmark;
   padding: 20px;
   position: absolute;
   z-index: 9;
-  color: black;
+  color: $bookmarkFont;
   box-shadow: 0.8px 1.6px 1.6px hsl(0deg 0% 0% / 0.48);
 }
 .hide:hover {

@@ -24,16 +24,34 @@ X mobile responsiveness
 X flag on url to become default start
 
 Fancy Version (Book)
-- book at start screen 
+X book at start screen 
 - on click flip open book 
 X tldr bookmark
 X resume download bookmark
 X flip pages
 X table of contents
-- WORK layout
-- PROJECTS layout
+X WORK layout
+X PROJECTS layout
 - ABOUT layout
 - CONTACT layout
+- achievement sound on send email
+
+Mobile responsive (Book)
+- tldr bookmark
+- resume bookmark
+- table of contents
+- work
+- tech
+- projects
+- about
+- extracurricular
+- contact
+
+Bonus:
+- BGM music
+- new paper like logo
+- if all sounds heard unlock achievement AHAH
+
 
 SEO
 - Helmet
