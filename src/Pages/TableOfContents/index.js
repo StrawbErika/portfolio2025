@@ -19,6 +19,7 @@ export function TableOfContents({ setPage }) {
     );
   };
   // TODO: onclick sound
+  // TODO: arrow keys (pulsing and disappearing)
   return (
     <div className={styles.contents}>
       <div className={styles.tableOfContents}>TABLE OF CONTENTS</div>

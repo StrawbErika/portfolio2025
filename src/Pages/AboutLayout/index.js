@@ -6,6 +6,7 @@ import { titles, colors } from "./constants";
 export function AboutLayout() {
   const [reveal, setReveal] = useState([]);
 
+  // TODO: sound?
   return (
     <div className={styles.about}>
       <div className={styles.title}>ERIKA LOUISE A. NEPOMUCENO</div>

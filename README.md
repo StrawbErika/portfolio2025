@@ -32,7 +32,7 @@ X flip pages
 X table of contents
 X WORK layout
 X PROJECTS layout
-- ABOUT layout
+X ABOUT layout
 - CONTACT layout
 - achievement sound on send email
 

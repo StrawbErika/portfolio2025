@@ -38,6 +38,7 @@ export function BookLayout() {
   };
   return (
     <div className={styles.bookLayout}>
+      {/* TODO: button carats */}
       <button
         className={selected < 1 ? styles.hide : styles.directionButtons}
         disabled={selected < 1}
@@ -76,7 +77,7 @@ export function BookLayout() {
             />
             <Page Left={<TechLayout />} Right={<ProjectsLayout />} />
             <Page Left={<AboutLayout />} Right={<ExtracurricularLayout />} />
-            <Page Right={<TableOfContents setPage={setSelected} />} />
+            <Page />
           </FlippingPages>
         </div>
       </div>
