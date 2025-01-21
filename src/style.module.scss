@@ -1,4 +1,5 @@
 @import "./colors";
+$starImg: url("./Assets/star.png");
 
 .appHeader {
   background-color: #282c34;
@@ -11,20 +12,40 @@
   color: white;
   overflow-y: hidden !important;
 }
-.book {
+.buttonAnimation {
+  position: relative;
+}
+.hide {
+  display: none;
+}
+.bookHide {
+  position: absolute;
+  margin-top: -32vw;
+  left: 7vw;
+  height: 25vw;
+  width: 25vw;
+  animation: growAndDisappear 2s ease-in-out;
+}
+.star {
   display: flex;
-  background-color: $scroll;
-  color: $scrollFont;
-  padding: 10px;
-  animation: bookAnimation;
-  border-radius: 10px;
+  background-image: $starImg;
+  object-fit: scale-down;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vw;
+  width: 40vw;
+  animation: starAnimation;
+}
+.book {
+  position: absolute;
+  margin-top: -32vw;
+  left: 7vw;
+  height: 25vw;
+  width: 25vw;
+  animation: pulse infinite 2s linear;
 }
 .slideOut {
-  // transition: translate 0.7s ease-out, overlay 0.7s ease-out,
-  //   display 0.7s ease-out allow-discrete;
-  // translate: 0 100vh;
-
-  animation: spin-and-delete 0.5s ease-in forwards;
   display: flex;
   background-color: $scroll;
   color: $scrollFont;
@@ -33,12 +54,12 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .book {
-    animation: bookAnimation infinite 20s linear;
+  .star {
+    animation: starAnimation infinite 20s linear;
   }
 }
 
-@keyframes bookAnimation {
+@keyframes starAnimation {
   from {
     transform: rotate(0deg);
   }
@@ -47,19 +68,23 @@
   }
 }
 
-@keyframes spin-and-delete {
+@keyframes growAndDisappear {
   0% {
-    transform: rotateY(0);
-  }
-  50% {
-    transform: rotateY(-90deg) scale(1.5);
-    color: $scroll;
-    opacity: 1;
+    opacity: 100%;
   }
   100% {
+    opacity: 0%;
     transform: scale(2);
-    color: $scroll;
-    opacity: 0;
-    display: none;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

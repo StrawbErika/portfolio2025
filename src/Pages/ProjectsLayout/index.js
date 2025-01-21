@@ -3,9 +3,11 @@ import styles from "./style.module.scss";
 import { project } from "./constants";
 import useSound from "use-sound";
 import click from "./../../Assets/click.mp3";
+import cardHover from "./../../Assets/cardHover.mp3";
 export function ProjectsLayout() {
   const [flip, setFlip] = useState([]);
   const [play] = useSound(click, { volume: 1 });
+  const [hover] = useSound(cardHover, { volume: 0.8 });
 
   // TODO: card flip??
   const ProjectInstance = ({ title, tech, description, picture, index }) => {
@@ -29,6 +31,9 @@ export function ProjectsLayout() {
     ) : (
       <div
         className={styles.card}
+        onMouseEnter={() => {
+          hover();
+        }}
         onClick={() => {
           setFlip(flip.concat(index));
           play();

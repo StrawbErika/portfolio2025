@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./style.module.scss";
 import book from "./Assets/flippage.mp3";
+import bookImg from "./Assets/book.png";
 import { TLDR } from "./Pages/TLDR";
 import { BookLayout } from "./Pages/BookLayout";
 import useSound from "use-sound";
@@ -17,19 +18,22 @@ function App() {
       {tldrFlag ? (
         <TLDR />
       ) : (
-        <div
-          className={open ? styles.slideOut : styles.book}
-          onClick={() => {
-            play();
-            setOpen(true);
+        <div className={showPage ? styles.hide : styles.buttonAnimation}>
+          <div className={showPage ? styles.hide : styles.star}></div>
 
-            setTimeout(() => {
-              setShowPage(true);
-            }, 500);
-          }}
-        >
-          hello
-          {/* TODO: animated div under the button that rotates and pulses */}
+          <img
+            onClick={() => {
+              play();
+              setOpen(true);
+
+              setTimeout(() => {
+                setShowPage(true);
+              }, 1000);
+            }}
+            src={bookImg}
+            className={open ? styles.bookHide : styles.book}
+            alt={"book"}
+          />
         </div>
       )}
       {showPage && <BookLayout />}

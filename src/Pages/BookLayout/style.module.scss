@@ -5,6 +5,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 1s ease;
 
   .directionButtons {
     margin: 10px;
@@ -49,4 +50,13 @@
 
 .iconButtons {
   font-size: 50px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
