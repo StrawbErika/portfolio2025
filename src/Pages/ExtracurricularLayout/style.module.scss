@@ -1,0 +1,24 @@
+@import "./../../colors";
+
+.contents {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  text-align: center;
+  align-items: center;
+  color: $scrollFont;
+  .title {
+    width: 70%;
+    letter-spacing: 5px;
+    font-size: 40px;
+    margin: 10% 0px 10px 0px;
+  }
+  .subtitle {
+    font-size: 20px;
+    font-weight: 200;
+    font-style: oblique;
+    margin: 10px 0px;
+  }
+}

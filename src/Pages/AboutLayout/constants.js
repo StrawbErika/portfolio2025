@@ -1,0 +1,28 @@
+export const titles = [
+  "Bullet Journaler",
+  "Digimon Card Game Player",
+  "CookieRun Card Game Player",
+  "Film Photographer",
+  "Digital Photographer",
+  "Digital Artist",
+  "Watercolor Artist",
+  "Crocheter",
+  "Reader",
+  "Fashion Ethusiast",
+  "Traveler",
+  "Artist Alley Vendor",
+];
+export const colors = [
+  "#CFB7E8",
+  "#A49BE0",
+  "#83C4F0",
+  "#68F0FF",
+  "#B0D79E",
+  "#CEF2A3",
+  "#FEFDA3",
+  "#FAC68E",
+  "#F5A467",
+  "#F67E57",
+  "#F5564F",
+  "#EEA3DB",
+];
