@@ -1,6 +1,7 @@
 import { useState } from "react";
 import book from "./../../Assets/flippage.mp3";
-
+import logo from "./../../Assets/embossed.png";
+import bye from "./../../Assets/bye1.png";
 import styles from "./style.module.scss";
 import { FlippingPages } from "flipping-pages";
 import { Bookmark } from "../../Components/Bookmark";
@@ -33,6 +34,23 @@ export function BookLayout() {
       <div className={styles.page}>
         <div className={styles.left}>{Left}</div>
         <div className={styles.right}>{Right}</div>
+      </div>
+    );
+  };
+  const Logo = () => {
+    return (
+      <div className={styles.logoContainer}>
+        <img className={styles.logo} src={logo} alt="logo" />
+        <div className={styles.text}> © Published 2025</div>
+      </div>
+    );
+  };
+  const Photo = () => {
+    return (
+      <div className={styles.photoContainer}>
+        <div className={styles.text}> I hope to hear from you soon!</div>
+
+        <img className={styles.photoContainer} src={bye} alt="bye" />
       </div>
     );
   };
@@ -70,14 +88,17 @@ export function BookLayout() {
             disableSwipe
           >
             {/* TODO: left is logo */}
-            <Page Right={<TableOfContents setPage={setSelected} />} />
+            <Page
+              Left={<Logo />}
+              Right={<TableOfContents setPage={setSelected} />}
+            />
             <Page
               Left={<WorkLayout flag="left" />}
               Right={<WorkLayout flag="right" />}
             />
             <Page Left={<TechLayout />} Right={<ProjectsLayout />} />
             <Page Left={<AboutLayout />} Right={<ExtracurricularLayout />} />
-            <Page />
+            <Page Right={<Photo />} />
           </FlippingPages>
         </div>
       </div>

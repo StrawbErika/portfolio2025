@@ -51,6 +51,58 @@
   }
 }
 
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  .logo {
+    width: 35%;
+    object-fit: scale-down;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .text {
+    font-style: oblique;
+    padding-top: 10px;
+    color: $scrollFont;
+    font-size: 15px;
+    font-weight: 300;
+    padding-bottom: 3%;
+  }
+}
+.photoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  .text {
+    background-color: $bookmarkFont;
+    text-align: center;
+    padding: 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    font-size: 40px;
+    border-radius: 100px;
+    font-weight: 200;
+    font-style: oblique;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  }
+  .photoContainer {
+    height: 60%;
+    object-fit: scale-down;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 .hide {
   opacity: 0;
   margin: 10px;

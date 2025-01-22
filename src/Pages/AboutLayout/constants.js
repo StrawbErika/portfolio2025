@@ -1,5 +1,5 @@
 export const titles = [
-  "Bullet Journaler",
+  "Bullet Journalist",
   "Digimon Card Game Player",
   "CookieRun Card Game Player",
   "Film Photographer",
