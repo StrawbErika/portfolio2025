@@ -1,74 +1,90 @@
-import atlasopen from "../../Assets/atlasopen.jpeg";
+import bubble from "../../Assets/bubble-io.svg";
+import css from "../../Assets/css.svg";
+import js from "../../Assets/js.svg";
+import mui from "../../Assets/mui.svg";
+import react from "../../Assets/react.svg";
+
+import electronjs from "../../Assets/electronjs.png";
+import firebase from "../../Assets/firebase.png";
+import gatsby from "../../Assets/gatsby.png";
+import java from "../../Assets/java.png";
+import opencv from "../../Assets/opencv.png";
+import postman from "../../Assets/postman.png";
+import python from "../../Assets/python.png";
+import sass from "../../Assets/sass.png";
+import vuejs from "../../Assets/vuejs.png";
 
 export const tech1 = [
   {
     Tech: "ReactJS",
-    Logo: atlasopen,
+    Logo: react,
   },
   {
     Tech: "JavaScript",
-    Logo: atlasopen,
+    Logo: js,
   },
   {
     Tech: "Firebase",
-    Logo: atlasopen,
+    Logo: firebase,
   },
 ];
 export const tech2 = [
   {
-    Tech: "HTML5/CSS",
-    Logo: atlasopen,
+    Tech: "CSS",
+    Logo: css,
   },
 
   {
     Tech: "SASS/SCSS",
-    Logo: atlasopen,
+    Logo: sass,
   },
   {
     Tech: "Material UI",
-    Logo: atlasopen,
+    Logo: mui,
   },
 ];
 export const tech3 = [
   {
     Tech: "React Native",
-    Logo: atlasopen,
+    Logo: react,
   },
   {
     Tech: "ElectronJS",
-    Logo: atlasopen,
+    Logo: electronjs,
   },
   {
     Tech: "VueJS",
-    Logo: atlasopen,
+    Logo: vuejs,
   },
 
   {
     Tech: "Gatsby",
-    Logo: atlasopen,
+    Logo: gatsby,
   },
   {
     Tech: "Python",
-    Logo: atlasopen,
-  },
-  {
-    Tech: "Beautiful Soup",
-    Logo: atlasopen,
+    Logo: python,
   },
   {
     Tech: "Java",
-    Logo: atlasopen,
+    Logo: java,
   },
   {
+    Tech: "Beautiful Soup",
+    Logo: python,
+  },
+
+  {
     Tech: "Open CV",
-    Logo: atlasopen,
+    Logo: opencv,
   },
   {
     Tech: "Postman",
-    Logo: atlasopen,
+    Logo: postman,
   },
+
   {
     Tech: "Bubble.io",
-    Logo: atlasopen,
+    Logo: bubble,
   },
 ];

@@ -56,9 +56,9 @@
     padding: 0px;
     .small {
       height: 100%;
-      width: 50%;
+      max-width: 30%;
       object-fit: scale-down;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
     .name {
       font-size: 15px;

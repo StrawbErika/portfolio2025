@@ -1,7 +1,10 @@
 import { useState } from "react";
 import book from "./../../Assets/flippage.mp3";
 import logo from "./../../Assets/embossed.png";
+import resume from "./../../Assets/Nepomuceno_Resume.pdf";
 import bye from "./../../Assets/bye1.png";
+import arrow from "./../../Assets/arrow.png";
+import mail from "./../../Assets/mail.webp";
 import styles from "./style.module.scss";
 import { FlippingPages } from "flipping-pages";
 import { Bookmark } from "../../Components/Bookmark";
@@ -37,6 +40,20 @@ export function BookLayout() {
       </div>
     );
   };
+  const LogoEnd = () => {
+    return (
+      <div className={styles.logoContainerEnd}>
+        <div className={styles.words}>
+          It was super nice of you to drop by, I'm sure Erika enjoyed your stay!
+          Make sure you keep in touch, ok?
+        </div>
+        <a href="mailto: erika.nepomuceno392@gmail.com" className={styles.link}>
+          <img className={styles.mail} src={mail} alt="logo" />
+        </a>
+      </div>
+    );
+  };
+
   const Logo = () => {
     return (
       <div className={styles.logoContainer}>
@@ -48,7 +65,7 @@ export function BookLayout() {
   const Photo = () => {
     return (
       <div className={styles.photoContainer}>
-        <div className={styles.text}> I hope to hear from you soon!</div>
+        <div className={styles.text}> She hopes to hear from you soon!</div>
 
         <img className={styles.photoContainer} src={bye} alt="bye" />
       </div>
@@ -57,18 +74,18 @@ export function BookLayout() {
   return (
     <div className={styles.bookLayout}>
       {/* TODO: button carats */}
-      <button
+      <div
         className={selected < 1 ? styles.hide : styles.directionButtons}
         disabled={selected < 1}
         onClick={back}
       >
-        Back
-      </button>
+        <img className={styles.arrowLeft} src={arrow} alt="bye" />
+      </div>
 
       <div className={styles.book}>
         <Bookmark
           icon={<AiOutlineFileText className={styles.iconButtons} />}
-          link={book}
+          link={resume}
           downloadFlag
           page={selected}
           name="RESUME"
@@ -77,7 +94,7 @@ export function BookLayout() {
           icon={<AiOutlineClockCircle className={styles.iconButtons} />}
           link={"?tldr=true"}
           page={selected}
-          name="TLDR?"
+          name="Simplified"
         />
 
         <div className={styles.pages}>
@@ -98,17 +115,17 @@ export function BookLayout() {
             />
             <Page Left={<TechLayout />} Right={<ProjectsLayout />} />
             <Page Left={<AboutLayout />} Right={<ExtracurricularLayout />} />
-            <Page Right={<Photo />} />
+            <Page Left={<LogoEnd />} Right={<Photo />} />
           </FlippingPages>
         </div>
       </div>
-      <button
+      <div
         disabled={selected === 4}
         className={selected === 4 ? styles.hide : styles.directionButtons}
         onClick={next}
       >
-        Next
-      </button>
+        <img className={styles.arrowRight} src={arrow} alt="bye" />
+      </div>
     </div>
   );
 }

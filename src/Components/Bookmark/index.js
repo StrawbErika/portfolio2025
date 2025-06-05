@@ -10,17 +10,36 @@ export function Bookmark({ icon, link, downloadFlag, page, name }) {
   const [play] = useSound(bookmark, { volume: 0.1 });
   return (
     <div className={page === 4 && styles.bookmarkRight}>
-      <a
-        onMouseEnter={() => {
-          play();
-        }}
-        style={downloadFlag ? { marginTop: "10%" } : {}}
-        className={page > 0 && page < 4 ? styles.hide : styles.bookmark}
-        href={link}
-      >
-        {icon}
-        {!(page > 0 && page < 4) && <div className={styles.title}>{name}</div>}
-      </a>
+      {downloadFlag ? (
+        <a
+          onMouseEnter={() => {
+            play();
+          }}
+          style={downloadFlag ? { marginTop: "10%" } : {}}
+          className={page > 0 && page < 4 ? styles.hide : styles.bookmark}
+          href={link}
+          download={"NepomucenoResume.pdf"}
+        >
+          {icon}
+          {!(page > 0 && page < 4) && (
+            <div className={styles.title}>{name}</div>
+          )}
+        </a>
+      ) : (
+        <a
+          onMouseEnter={() => {
+            play();
+          }}
+          style={downloadFlag ? { marginTop: "10%" } : {}}
+          className={page > 0 && page < 4 ? styles.hide : styles.bookmark}
+          href={link}
+        >
+          {icon}
+          {!(page > 0 && page < 4) && (
+            <div className={styles.title}>{name}</div>
+          )}
+        </a>
+      )}
     </div>
   );
 }
