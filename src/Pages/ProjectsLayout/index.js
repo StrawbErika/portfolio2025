@@ -48,7 +48,7 @@ export function ProjectsLayout() {
     <div className={styles.contents}>
       <div className={styles.title}>PROJECTS</div>
       <div className={styles.subtitle}>
-        Some fun projects I've done over the years!
+        Some fun projects Erika has done over the years!
       </div>
       <div className={styles.row}>
         {project.map((proj, i) => {

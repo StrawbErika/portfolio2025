@@ -5,8 +5,6 @@ export function WorkLayout({ flag }) {
   const WorkInstance = ({ work }) => {
     return (
       <div className={styles.work}>
-        {/* TODO: flip and show location? */}
-        {/* TODO: add card flip sound*/}
         <img className={styles.logo} src={work.Logo} alt={work.Company} />
         <div>
           <div className={styles.subHeader}>{work.Title}</div>
