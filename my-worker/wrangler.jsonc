@@ -5,13 +5,13 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "my-worker",
-	"main": "src/index.ts",
+	"main": "src/index.js",
 	"compatibility_date": "2025-06-06",
 	"compatibility_flags": [
 		"global_fetch_strictly_public"
 	],
 	"assets": {
-		"directory": "./public"
+		"directory": "src/Assets"
 	},
 	"observability": {
 		"enabled": true
